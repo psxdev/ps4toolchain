@@ -9,7 +9,6 @@ before_install:
  - brew install libelf
 
 script:
- - mkdir psp2
  - ./compile_toolchain.sh
  - ls -l ps4dev ps4dev/host-osx ps4dev/toolchain 
 
