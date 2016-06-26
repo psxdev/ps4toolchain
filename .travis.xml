@@ -1,0 +1,21 @@
+compiler:
+    - gcc
+    - clang
+
+language: objective-c
+
+before_install:
+ - brew update && brew outdated cmake || brew upgrade cmake
+ - brew install libelf
+script:
+ - mkdir psp2
+ - ./compile_toolchain.sh
+ - ls -l ps4dev ps4dev/host-osx ps4dev/toolchain 
+
+env:
+ global:
+  - TOP=$PWD
+  - PS4DEV=$TOP/ps4dev
+
+
+
